@@ -1,6 +1,7 @@
 const https = require("https");
 const dotenv  = require('dotenv').config({path:`./config.env`});
 
+//Controller Handler for checking usernmae
 exports.getCheckUsername = (req, res) => {
     var username=req.query.username
     const username_options = {
@@ -31,6 +32,8 @@ exports.getCheckUsername = (req, res) => {
     twitterReq.end()
 };
 
+
+//Controller handler for getting tweets
 exports.getTweets = (req, res, next) => {
     var user_id=req.query.user_id
     const username_options = {

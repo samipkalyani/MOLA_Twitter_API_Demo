@@ -11,7 +11,9 @@ const bodyParser = require("body-parser");
 //Using router
 const userRoutes=require("./Routes/userRoutes")
 
-const app=express(); //app object
+//Express object
+const app=express();
+
 //Using CORS for cross origin requests.
 const corsOptions = {
 	origin: "*"
@@ -21,7 +23,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, ".", "/")));
 
+//Routing user requests to userRoutes
 app.use(userRoutes)
 
-//Listen on 8000
+//Listening on 8000
 app.listen(8000)
