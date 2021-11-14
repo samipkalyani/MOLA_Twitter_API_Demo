@@ -1,0 +1,19 @@
+/* font styles */
+
+.heading {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* -------- */
+
+.userCard {
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.userCard:hover {
+  box-shadow: 4px 4px 10px rgb(207, 207, 207);
+}
